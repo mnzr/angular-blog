@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Post ID</td>
+        <td>Title</td>
+      </tr>
+    </thead>
+    <tbody>
+    <span infinite-scroll='loadMore()' infinite-scroll-distance='2'>
+      <tr ng-repeat="post in posts">
+        <td>{{post.id}}</td>
+        <td>{{post.title}}</td>
+      </tr>
+    </span>
+    </tbody>
+  </table>
+
+  </table>
+</div>
