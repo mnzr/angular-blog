@@ -15,11 +15,13 @@ angular.module('angularBlogApp')
         $http.get('http://jsonplaceholder.typicode.com/posts')
         .success(function(data) {
             var i;
-            for(i = counter; i < step; i++) {
-                $scope.posts.push(data[i]);
+            if(step < 101) {
+              for(i = counter; i < step; i++) {
+                  $scope.posts.push(data[i]);
+              }
+              step += 10;
+              counter += 10;
             }
-            step += 10;
-            counter += 10;
         });
     };
   }]);

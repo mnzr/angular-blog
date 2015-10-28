@@ -9,14 +9,12 @@
   <table class="table">
     <thead>
       <tr>
-        <td>User ID</td>
         <td>Name</td>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="user in users">
-        <td>{{user.id}}</td>
-        <td>{{user.name}}</td>
+        <td><a ng-click="showDetails = !showDetails">{{user.name}}</a><span ng-show="showDetails"> {{user.email}}</span></td>
       </tr>
     </tbody>
   </table>
